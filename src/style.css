@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('./restaurant.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#navBar {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    overflow: hidden;
+    padding: 20px;
+}
+
+#logo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: auto;
+    cursor: pointer;
+    color: aqua;
+}
+
+#tabs {
+    display: flex;
+}
+
+button {
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
