@@ -1,11 +1,16 @@
 const contactTab = () => {
-  const contactDiv = document.createElement('div');
-  contactDiv.id = 'contactDiv';
-  contactDiv.innerHTML = `<h1>Contact Us</h1>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                          Suspendisse pharetra elit vel vestibulum scelerisque.</p>`;
-  contactDiv.style.backgroundColor = 'lightyellow';
-  contactDiv.style.padding = '20px';
-  document.getElementById('content').appendChild(contactDiv);
+  const contactContainer = document.createElement('div');
+  contactContainer.classList.add('contact-container');
+
+  const contactHeader = document.createElement('h2');
+  contactHeader.textContent = 'Contact Us';
+  contactHeader.appendChild(contactHeader);
+
+  const contactContent = document.createElement('p');
+  contactContent.classList.add('contact-content');
+  contactContent.textContent = 'Feel free to reach out to us with any questions or comments. You can call us at (123) 456-7890 or send us an email at info@melina.com.';
+  contactContent.appendChild(contactContent);
+
+  return contactContainer;
 };
 export default contactTab;

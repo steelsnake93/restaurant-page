@@ -79,18 +79,30 @@ function createFooter() {
   }
 
 function loadHome() {
+    const content = document.querySelector('main');
+    content.innerHTML = '';
+    content.appendChild(createWelcomePage());
 };
 
 function loadMenu() {
-
+    const content = document.querySelector('main');
+    content.innerHTML = '';
+    
+    content.appendChild(createMenuTab());
 };
 
 function loadAbout() {
-
+    const content = document.querySelector('main');
+    content.innerHTML = '';
+    
+    content.appendChild(createAboutTab());
 };
 
 function loadContact() {
-
+    const content = document.querySelector('main');
+    content.innerHTML = '';
+    
+    content.appendChild(createContactTab());
 };
 
 function setActiveButton(activeBtn) {
