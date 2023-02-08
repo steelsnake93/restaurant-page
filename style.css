@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('./images/restaurant.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+header * {
+    display: inline;
+}
+
+header {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(27, 27, 27, 0.7);
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    height: 80px;
+    box-shadow: 0 0 25px 0 black;
+}
+
+.restaurant-logo {
+    font-family: cursive;
+    margin-left: 20px;
+    display: block;
+    color: #85916b;
+    cursor: pointer;
+}
+
+header li {
+    margin: 30px;
+}
+
+header li a {
+    font-family: serif;
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    font-size: large;
+    align-items: center;
+    width: 65%;
+    margin: 0 auto;
+    text-align: center;
+    padding: auto;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    background-color: #302f2fb3;
+    font-family: serif;
+    color: white;
+}
+
+.menu-list  {
+    padding-left: 0;
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    gap: 2.5rem;
+}
+
+.menu-item {
+    list-style: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.2rem;
+    font-family: serif;
+    color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.8);
+    background-color: #302f2fb3;
+  }
+
+@media (max-width: 600px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+@media (max-width: 450px) {  
+    .restaurant-logo {
+        display: none;
+    }
+}
