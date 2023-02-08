@@ -26,7 +26,6 @@ header {
     align-items: center;
     justify-content: space-around;
     background-color: rgba(27, 27, 27, 0.7);
-    /* position: relative; */
     top: 0;
     left: 0;
     right: 0;
@@ -55,7 +54,6 @@ header li a {
 
 main {
     font-size: large;
-    /* display: flex; */
     align-items: center;
     width: 65%;
     margin: 0 auto;
@@ -83,6 +81,8 @@ main {
     flex-direction: column;
     justify-content: space-around;
 }
+
+
 .footer {
     display: flex;
     align-items: center;
