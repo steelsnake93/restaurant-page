@@ -1,6 +1,7 @@
 import createContactTab from './contactTab';
 import createMenuTab from './menuTab';
 import createAboutTab from './aboutTab';
+import createWelcomePage from './welcomePage';
 import '../dist/style.css';
 
 function createHeader() {
@@ -57,20 +58,51 @@ function createHeader() {
     return header;
 };
 
-function loadHome() {
+function createMain() {
+    const main = document.createElement('main');
+    main.classList.add('main');
+    main.appendChild(createWelcomePage());
 
+    return main;
+}
+
+function createFooter() {
+    const footer = document.createElement("footer");
+    footer.classList.add("footer");
+  
+    const copyright = document.createElement("p");
+    copyright.textContent = `Copyright © ${new Date().getFullYear()} Melina Restaurant `;
+  
+    footer.appendChild(copyright);
+  
+    return footer;
+  }
+
+function loadHome() {
+    const content = document.querySelector('main');
+    content.innerHTML = '';
+    content.appendChild(createWelcomePage());
 };
 
 function loadMenu() {
-
+    const content = document.querySelector('main');
+    content.innerHTML = '';
+    
+    content.appendChild(createMenuTab());
 };
 
 function loadAbout() {
-
+    const content = document.querySelector('main');
+    content.innerHTML = '';
+    
+    content.appendChild(createAboutTab());
 };
 
 function loadContact() {
-
+    const content = document.querySelector('main');
+    content.innerHTML = '';
+    
+    content.appendChild(createContactTab());
 };
 
 function setActiveButton(activeBtn) {
@@ -88,6 +120,8 @@ function initializeWebPage() {
     const content = document.getElementById('content');
 
     content.appendChild(createHeader());
+    content.appendChild(createMain());
+    content.appendChild(createFooter());
 
     setActiveButton(document.querySelector('.button-nav'));
     loadHome();
