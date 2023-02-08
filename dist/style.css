@@ -9,31 +9,56 @@ body {
     background-position: center;
 }
 
-.header {
+header * {
+    display: inline;
+}
+
+header {
+    font-size: 1.8rem;
     display: flex;
     align-items: center;
-    background-color: #333;
-    overflow: hidden;
-    padding: 10px;
+    justify-content: space-around;
+    background-color: rgba(27, 27, 27, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    box-shadow: 0 0 25px 0 black;
 }
 
 .restaurant-logo {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-right: auto;
-    cursor: pointer;
-    color: aqua;
+    font-family: cursive;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: block;
+    color: #85916b;
 }
 
-#tabs {
-    display: flex;
+header li {
+    margin: 30px;
 }
 
-button {
-    background-color: white;
-    border: 1px solid gray;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin-right: 10px;
-    cursor: pointer;
+header li a {
+    font-family: serif;
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+@media (max-width: 450px) {  
+    .restaurant-logo {
+        display: none;
+    }
 }

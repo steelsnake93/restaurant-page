@@ -9,8 +9,7 @@ function createHeader() {
 
     const restaurantLogo = document.createElement('h1');
     restaurantLogo.classList.add('restaurant-logo');
-    restaurantLogo.textContent = 'LOGO';
-
+    restaurantLogo.textContent = 'Melina';
     header.appendChild(restaurantLogo);
     restaurantLogo.addEventListener('click', loadHome);
     
@@ -18,23 +17,42 @@ function createHeader() {
     nav.classList.add('nav');
     header.appendChild(nav);
 
-    const menuBtn = document.createElement('button');
-    menuBtn.classList.add('button-nav');
-    menuBtn.textContent = 'Menu';
-    menuBtn.addEventListener('click', loadMenu);
-    nav.appendChild(menuBtn);
+    const navList = document.createElement('ul');
+    navList.classList.add('nav-list');
+    nav.appendChild(navList);
 
-    const aboutBtn = document.createElement('button');
-    aboutBtn.classList.add('button-nav');
-    aboutBtn.textContent = 'About';
-    aboutBtn.addEventListener('click', loadAbout);
-    nav.appendChild(aboutBtn);
+    const menuItem = document.createElement('li');
+    menuItem.classList.add('nav-item');
+    navList.appendChild(menuItem);
+    
+    const menuLink = document.createElement('a');
+    menuLink.classList.add('nav-link');
+    menuLink.textContent = 'Menu';
+    menuLink.href = '#menu';
+    menuLink.addEventListener('click', loadMenu);
+    menuItem.appendChild(menuLink);
 
-    const contactBtn = document.createElement('button');
-    contactBtn.classList.add('button-nav');
-    contactBtn.textContent = 'Contact';
-    contactBtn.addEventListener('click', loadContact);
-    nav.appendChild(contactBtn);    
+    const aboutItem = document.createElement('li');
+    aboutItem.classList.add('nav-item');
+    navList.appendChild(aboutItem);
+    
+    const aboutLink = document.createElement('a');
+    aboutLink.classList.add('nav-link');
+    aboutLink.textContent = 'About';
+    aboutLink.href = '#about';
+    aboutLink.addEventListener('click', loadAbout);
+    aboutItem.appendChild(aboutLink);
+
+    const contactItem = document.createElement('li');
+    contactItem.classList.add('nav-item');
+    navList.appendChild(contactItem);
+    
+    const contactLink = document.createElement('a');
+    contactLink.classList.add('nav-link');
+    contactLink.textContent = 'Contact';
+    contactLink.href = '#contact';
+    contactLink.addEventListener('click', loadContact);
+    contactItem.appendChild(contactLink); 
 
     return header;
 };
