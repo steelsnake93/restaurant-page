@@ -1,4 +1,5 @@
 {
+  "homepage": "https://steelsnake93.github.io/restaurant-page/",
   "name": "restaurant-page",
   "version": "1.0.0",
   "description": "Project: Restaurant Page",
@@ -7,6 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --progress --mode=production",
     "watch": "webpack --progress --watch",
+    "predeploy": "npm run build",
     "deploy": "gh-pages --dist 'dist' --branch 'release'"
   },
   "repository": {
@@ -19,7 +21,6 @@
   "bugs": {
     "url": "https://github.com/steelsnake93/restaurant-page/issues"
   },
-  "homepage": "https://github.com/steelsnake93/restaurant-page#readme",
   "devDependencies": {
     "css-loader": "^6.7.3",
     "gh-pages": "^5.0.0",
